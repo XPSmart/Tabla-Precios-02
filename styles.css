@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+body {
+	font-family: 'Roboto', sans-serif ;
+	font-size: 16px;
+	background-color: rgba(0,0,0,.9);
+}
+html {
+	min-height: 100vh;
+}
+
+
+.card-container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card {
+	text-align: center;
+	border-radius: 15px;
+	box-shadow: 0 10px 15px rgba(0,0,0,.1);
+	padding: 30px 50px;
+
+	cursor: pointer;
+	transition: all .8s;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.card:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	background: rgba(255,255,255,.1);
+	z-index: 1;
+	transform: skewY(-5deg) scale(1.5);
+}
+
+.card:nth-child(1),
+.card:nth-child(1) .card__icon {
+    background-image: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+.card:nth-child(2),
+.card:nth-child(2) .card__icon {
+	background-image: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.card:nth-child(3), 
+.card:nth-child(3) .card__icon {
+	background-image: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+.card:nth-child(4), 
+.card:nth-child(4) .card__icon {
+    background-image: linear-gradient(-45deg, #fe0847, #feae3f);
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card__icon{
+	color: white;
+	font-size: 60px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	text-align: center;
+	box-shadow: 0 10px 10px rgba(0,0,0,.1);
+	line-height: 100px;
+}
+
+.card__title {
+	color: white;
+	font-size: 28px;
+	margin: 20px 0 0;
+
+	position: relative;
+	z-index: 2;
+}
+
+.card__pricing {
+	position: relative;
+	z-index: 2;
+}
+
+.card__price {
+	color: white;
+	margin: 20px 0;
+	font-size: 60px;
+}
+
+.card__options  {
+	position: relative;
+	z-index: 2;
+}
+
+.card__option {
+	color: white;
+	margin-bottom: 10px;
+}
+
+.card__buy {
+	position: relative;
+	z-index: 2;
+
+	background-color: white;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 40px;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	margin: 20px auto 0;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	color: rgba(0,0,0,.8);
+	transition: all .9s;
+}
+.card__buy:hover {
+	background-color: #f4f4f4;
+	color: rgba(0,0,0,.9);
+}
+
+
+
+@media screen and (min-width: 600px) {
+	.card-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.card {
+		flex-basis: 47%;
+	}
+}
+
+
+@media screen and (min-width: 960px) {
+	.card {
+		flex-basis: 31%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.card {
+		flex-basis: 23%;
+	}
+}
